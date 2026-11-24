@@ -1,0 +1,46 @@
+{
+  "uid": "hubspot_provisioner",
+  "type": "app",
+  "config": {
+    "name": "HubSpot Provisioner",
+    "description": "Provisions your HubSpot portal with standard properties, workflows, and dashboards.",
+    "distribution": "marketplace",
+    "auth": {
+      "type": "oauth",
+      "redirectUrls": ["https://your-domain.com/oauth/callback"],
+      "requiredScopes": [
+        "oauth",
+        "crm.objects.contacts.read",
+        "crm.objects.contacts.write",
+        "crm.objects.companies.read",
+        "crm.objects.companies.write",
+        "crm.objects.deals.read",
+        "crm.objects.deals.write",
+        "automation",
+        "crm.schemas.contacts.write",
+        "crm.schemas.companies.write",
+        "crm.schemas.deals.write",
+        "crm.schemas.custom.read",
+        "crm.objects.custom.read",
+        "crm.lists.read",
+        "crm.lists.write"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
+    },
+    "permittedUrls": {
+      "fetch": [
+        "https://api.hubapi.com",
+        "https://your-domain.com"
+      ],
+      "iframe": [],
+      "img": []
+    },
+    "support": {
+      "supportEmail": "support@example.com",
+      "documentationUrl": "https://example.com/docs",
+      "supportUrl": "https://example.com/support",
+      "supportPhone": ""
+    }
+  }
+}
